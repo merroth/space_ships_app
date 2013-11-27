@@ -18,7 +18,7 @@ function()
 	if(playing)
 	{
 		credits++;
-		credits+=Math.floor((new Date()-time)/2000);
+		credits+=Math.floor((new Date()-time)/1000);
 		document.getElementById("Credits").innerHTML = "Credits: "+credits;
 		document.getElementById("time").innerHTML = "Survived for: "+Math.floor((new Date()-time)/1000)+" seconds";
 	}

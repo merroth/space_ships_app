@@ -14,8 +14,9 @@ document.getElementById("mycanvas").addEventListener("mousedown", function(event
 {
 	mx = (event.clientX) - (document.getElementById("mycanvas").offsetLeft) + pageXOffset,
 	my = (event.clientY) - (document.getElementById("mycanvas").offsetTop) + pageYOffset;
-
-	if(event.which == 3)
+	console.log(event.which);
+	
+	if(event.which == 1)
 	{
 		for(var instans in instanceArray)
 		{
@@ -23,14 +24,6 @@ document.getElementById("mycanvas").addEventListener("mousedown", function(event
 			{
 				instanceArray[instans].target = [mx,my];
 			}
-		}
-	}
-	if(event.which == 1)
-	{
-		infoBox("reset");
-		for(var i in instanceArray)
-		{
-			instanceArray[i].selected = false;
 		}
 		for(var i in instanceArray)
 		{
@@ -78,5 +71,12 @@ function infoBox(key)
 		document.getElementById("Damage").innerHTML = "Damage: ";
 		document.getElementById("Hp").innerHTML = "Health: ";
 		document.getElementById("Acceleration").innerHTML = "Acceleration: ";
+	}
+}
+function deselect()
+{
+	for(var i in instanceArray)
+	{
+		instanceArray[i].selected = false;
 	}
 }
