@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{/*nulstiller marginer og padding*/
+   margin:0;
+   padding:0;
+}
+.infoElements
+{
+	float:left;
+	margin-left:1em;
+	height:150px;
+	width:250px;
+}
+.infoElements p
+{
+	line-height:3em;
+}

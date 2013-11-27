@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Spaceships</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="container" class="app" style='width:800px; margin:0 auto;'>				<!-- Wrapper -->
+		<canvas height="400" width="800" id="mycanvas" style='background-image:"img/bg.jpg";'></canvas><!-- Canvas -->
+        <div id="infoBox">
+            <div class="infoElements">
+                <p id="InfoType">Class: </p>
+                <p id="InfoName">Captain: </p>
+                <p id="InfoVelocity">Max Speed: </p>
+            </div>
+            <div class="infoElements">
+                <p id="Damage">Damage: </p>
+                <p id="Hp">Health: </p>
+                <p id="Acceleration">Acceleration: </p>
+            </div>
+            <div class="infoElements">
+                <p id="Credits">Credits: </p>
+                <input type="button" id="scout" name="scout" value="Scout(100)" onclick="spawn(this)"/>
+                <input type="button" id="Fighter" name="Fighter" value="Fighter(750)" onclick="spawn(this)"/>
+                <input type="button" id="Cruiser" name="Cruiser" value="Cruiser(5000)" onclick="spawn(this)"/>
+                <input type="button" id="Destroyer" name="Destroyer" value="Destroyer(10000)" onclick="spawn(this);return false;"/>
+                <p id="time">Survived: </p>
+            </div>
+        </div>
+	</div>
+	<script type="text/javascript" src="js/mouse.js"></script>				<!-- Eventlistener til mus -->
+	<script type="text/javascript" src="js/variables.js"></script>			<!-- Variabel liste -->
+	<script type="text/javascript" src="js/class_instance.js"></script>			<!-- Instans klassen, grundlaget for alle andre -->
+	<script type="text/javascript" src="js/class_selectable.js"></script>		<!-- Ting der kan vælges -->
+	<script type="text/javascript" src="js/class_controllable.js"></script>		<!-- Ting der kan styres -->
+	<script type="text/javascript" src="js/class_station.js"></script>			<!-- Klassen til din rumstation. Denne klasse udvider controllable klassen. -->
+	<script type="text/javascript" src="js/class_scout.js"></script>			<!-- Klassen til dine spejder skibe. Denne klasse udvider controllable klassen. -->
+	<script type="text/javascript" src="js/class_fighter.js"></script>			<!-- Klassen til dine kriger skibe. Denne klasse udvider controllable klassen. -->
+	<script type="text/javascript" src="js/class_cruiser.js"></script>			<!-- Klassen til dine krydser skibe. Denne klasse udvider controllable klassen. -->
+	<script type="text/javascript" src="js/class_destroyer.js"></script>		<!-- Klassen til dine destroyer skibe. Denne klasse udvider krydser klassen. -->
+	<script type="text/javascript" src="js/class_boom-32.js"></script>			<!-- Små eksplosioner (32 pixels bredde) -->
+	<script type="text/javascript" src="js/class_boom-200.js"></script>			<!-- Store eksplosioner (200 pixels bredde) -->
+	<script type="text/javascript" src="js/class_trail.js"></script>			<!-- Klassen til røgspor (haler). -->
+	<script type="text/javascript" src="js/class_meteor.js"></script>			<!-- Meteor klassen for meteor regn. Denne klasse anvendes ikke i øjeblikket -->
+	<script type="text/javascript" src="js/class_laserblast.js"></script>		<!-- Klassen til laser skud. Denne klasser udvider Instans klassen -->
+	<script type="text/javascript" src="js/class_superlaser.js"></script>		<!-- Klassen til Destroyerens laser skud. Denne klasser udvider laserskud klassen klassen -->
+	<script type="text/javascript" src="js/instantiation.js"></script>		<!-- Opstilling af spil elementer -->
+	<script type="text/javascript" src="js/draw.js"></script>				<!-- Visualiserings koden - Her bliver der tegnet på Canvas -->
+	<script type="text/javascript" src="js/simulate.js"></script>			<!-- Fysikmotor til spillet -->
+	<script type="text/javascript" src="js/simulate_projectiles.js"></script>	<!-- Fysikmotor til spillet for projektiler. -->
+</body>
+</html>
