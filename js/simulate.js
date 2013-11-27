@@ -72,7 +72,7 @@ function simulate()
 				{
 					playing = false;
 					
-					alert("Your Space-Station Has Been Destroyed!\n\n\nYour valiant effort held of your attackers for "+Math.round((new Date()-time)/1000)+" seconds, which gave your citizens plenty of time to evacuate.\n\n(Yay! ^^ Happy Ending!)");
+					alert("Din station er knust!\n\nDu stod fast overfor fjenden i "+Math.round((new Date()-time)/1000)+" sekunder, hvilket gav dit folk rigeligt med tid til at evakuere.\n\n(Yay! ^^ Happy Ending!)");
 				},40);
 			}
 		}

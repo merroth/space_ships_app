@@ -1,37 +1,37 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<title>Spaceships</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="container" class="app" style='width:800px; margin:0 auto;'>				<!-- Wrapper -->
 		<canvas height="400" width="800" id="mycanvas" style='background-image:"img/bg.jpg";'></canvas><!-- Canvas -->
-        <div id="infoBox">
-            <div class="infoElements">
-                <p id="InfoType">Class: </p>
-                <p id="InfoName">Captain: </p>
-                <p id="InfoVelocity">Max Speed: </p>
-            </div>
-            <div class="infoElements">
-                <p id="Damage">Damage: </p>
-                <p id="Hp">Health: </p>
-                <p id="Acceleration">Acceleration: </p>
-            </div>
-            <div class="infoElements" style="width:270px">
-                <p><span id="Credits">Credits: </span> <span id="time">Survived: </span></p>
-                <input type="button" class="btn" id="deselect" name="deselect" value="Deselect" onclick="deselect(this);return false;"/><br/>
-                <input type="button" class="btn" id="scout" name="scout" value="Scout(100)" onclick="spawn(this)"/>
-                <input type="button" class="btn" id="Fighter" name="Fighter" value="Fighter(750)" onclick="spawn(this)"/>
-                <input type="button" class="btn" id="Cruiser" name="Cruiser" value="Cruiser(5000)" onclick="spawn(this)"/>
-                <input type="button" class="btn" id="Destroyer" name="Destroyer" value="Destroyer(10000)" onclick="spawn(this);return false;"/>
-                
-            </div>
-        </div>
+	<div id="infoBox">
+	    <div class="infoElements">
+		<p id="InfoType">Class: </p>
+		<p id="InfoName">Captain: </p>
+		<p id="InfoVelocity">Max Speed: </p>
+	    </div>
+	    <div class="infoElements">
+		<p id="Damage">Damage: </p>
+		<p id="Hp">Health: </p>
+		<p id="Acceleration">Acceleration: </p>
+	    </div>
+	    <div class="infoElements" style="width:270px">
+		<p><span id="Credits">Credits: </span> <span id="time">Survived: </span></p>
+		<input type="button" class="btn" id="deselect" name="deselect" value="Deselect" onclick="deselect(this);return false;"/><br/>
+		<input type="button" class="btn" id="scout" name="scout" value="Scout(100)" onclick="spawn(this)"/>
+		<input type="button" class="btn" id="Fighter" name="Fighter" value="Fighter(750)" onclick="spawn(this)"/>
+		<input type="button" class="btn" id="Cruiser" name="Cruiser" value="Cruiser(5000)" onclick="spawn(this)"/>
+		<input type="button" class="btn" id="Destroyer" name="Destroyer" value="Destroyer(10000)" onclick="spawn(this);return false;"/>
+		
+	    </div>
+	</div>
 	</div>
 	<script type="text/javascript" src="js/mouse.js"></script>				<!-- Eventlistener til mus -->
 	<script type="text/javascript" src="js/variables.js"></script>			<!-- Variabel liste -->
@@ -53,5 +53,8 @@
 	<script type="text/javascript" src="js/draw.js"></script>				<!-- Visualiserings koden - Her bliver der tegnet på Canvas -->
 	<script type="text/javascript" src="js/simulate.js"></script>			<!-- Fysikmotor til spillet -->
 	<script type="text/javascript" src="js/simulate_projectiles.js"></script>	<!-- Fysikmotor til spillet for projektiler. -->
+	<script type="text/javascript">
+		alert("Velkommen til Spaceships\n\nI dette spil gælder det om at redde din rumstation fra de indvaderende styrker!\n\nDu styrer dine enheder ved at klikke på dem og derefter på deres destination.\n\nRekruttering og økonomi styres fra knapperne nederst højre.\n\nHeld og lykke!");
+	</script><!-- Her er min egen Javascript-->
 </body>
 </html>

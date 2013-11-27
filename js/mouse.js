@@ -14,7 +14,6 @@ document.getElementById("mycanvas").addEventListener("mousedown", function(event
 {
 	mx = (event.clientX) - (document.getElementById("mycanvas").offsetLeft) + pageXOffset,
 	my = (event.clientY) - (document.getElementById("mycanvas").offsetTop) + pageYOffset;
-	console.log(event.which);
 	
 	if(event.which == 1)
 	{

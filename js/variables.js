@@ -13,13 +13,14 @@ id = -1,
 time = new Date();
 function difference (a, b) { return Math.abs(a - b) }
 setInterval(
-function()
-{
-	if(playing)
+	function()
 	{
-		credits++;
-		credits+=Math.floor((new Date()-time)/1000);
-		document.getElementById("Credits").innerHTML = "Credits: "+credits;
+		if(playing)
+		{
+			credits++;
+			credits+=Math.floor((new Date()-time)/1000);
+			document.getElementById("Credits").innerHTML = "Credits: "+credits;
+		}
 		document.getElementById("time").innerHTML = "Survived for: "+Math.floor((new Date()-time)/1000)+" seconds";
 	}
-},1000/10);
+,1000/10);
